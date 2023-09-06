@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>senai.inlock.webApi</name>
+    </assembly>
+    <members>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.Get">
+            <summary>
+            Endpoint que aciona o  metodo ListarTodos no repositorio
+            </summary>
+            <returns>retorna a resposta para o usuario(front-end)</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.Post(senai.inlock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Endpoint que aciona o metodo de cadastro de estudio
+            </summary>
+            <param name="novoEstudio">Objeto recebido na requisição</param>
+            <returns>status code 201(created)</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.Delete(System.Int32)">
+            <summary>
+            Endpoint que aciona o metodo de deletar de Estudio
+            </summary>
+            <param name="id">id do objeto recebido</param>
+            <returns>code 201(deleted)</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.JogoController.Get">
+            <summary>
+            Endpoint que aciona o  metodo ListarTodos no repositorio
+            </summary>
+            <returns>retorna a resposta para o usuario(front-end)</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.JogoController.Post(senai.inlock.webApi.Domains.JogoDomain)">
+            <summary>
+            Endpoint que aciona o metodo de cadastro de jogo
+            </summary>
+            <param name="novoJogo">Objeto recebido na requisição</param>
+            <returns>status code 201(created)</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.JogoController.Delete(System.Int32)">
+            <summary>
+            Endpoint que aciona o metodo de deletar de Estudio
+            </summary>
+            <param name="id">id do objeto recebido</param>
+            <returns>code 201(deleted)</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IEstudioRepository.ListarTodos">
+            <summary>
+            Lista todos os estudios cadastrados
+            </summary>
+            <returns>Lista com os objetos </returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IEstudioRepository.Cadastrar(senai.inlock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo objeto estudio
+            </summary>
+            <param name="novoEstudio">novo objeto estudio a ser cadastrado</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IEstudioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um objeto estudio pelo seu id
+            </summary>
+            <param name="id">id do objeto a ser deletado</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.ListarTodos">
+            <summary>
+            Lista todos os estudios cadastrados
+            </summary>
+            <returns>Lista com os objetos </returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.Cadastrar(senai.inlock.webApi.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo objeto jogo
+            </summary>
+            <param name="novoJogo">novo objeto jogo a ser cadastrado</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um objeto jogo pelo seu id
+            </summary>
+            <param name="id">id do objeto a ser deletado</param>
+        </member>
+        <member name="F:senai.inlock.webApi.Repositories.EstudioRepository.StringConexao">
+            <summary>
+            String de conexao com o banco de dados que recebe os seguintes parametros
+            Data Source : Nome do servidor
+            Initial Catalog : Nome do Banco de dados
+            Autenticacao:
+                -Windows : Intergrated Security = true
+                -SQLServer : User Id = sa Pwd = Senha
+            </summary>
+        </member>
+        <member name="F:senai.inlock.webApi.Repositories.JogoRepository.StringConexao">
+            <summary>
+            String de conexao com o banco de dados que recebe os seguintes parametros
+            Data Source : Nome do servidor
+            Initial Catalog : Nome do Banco de dados
+            Autenticacao:
+                -Windows : Intergrated Security = true
+                -SQLServer : User Id = sa Pwd = Senha
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -22,11 +22,14 @@ namespace senai.inlock.webApi.Repositories
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
                 //Declara a query que sera executada
-                string queryInsert = "INSERT INTO Jogo(Nome, Descricao, Valor, DataLancamento) VALUES (@Nome, @Descricao, @Valor, @DataLancamento)";
+                string queryInsert = "INSERT INTO Jogo(IdEstudio, Nome, Descricao, Valor, DataLancamento) VALUES (@IdEstudio, @Nome, @Descricao, @Valor, @DataLancamento)";
 
                 //Declara o SqlComand passando a query que sera executada e a conexao com o banco
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
+                    //Passa o valor do parametro @IdEstudio
+                    cmd.Parameters.AddWithValue("@IdEstudio", novoJogo.IdEstudio);
+
                     //Passa o valor do parametro @Nome
                     cmd.Parameters.AddWithValue("@Nome", novoJogo.Nome);
 

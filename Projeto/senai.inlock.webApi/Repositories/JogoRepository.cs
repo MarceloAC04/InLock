@@ -101,10 +101,10 @@ namespace senai.inlock.webApi.Repositories
                             Descricao = rdr["Descricao"].ToString(),
 
                             //Atribui a propriedade DataLancamento o valor recebido no rdr
-                            DataLancamento = rdr["DataLancamento"].ToString(),
+                            DataLancamento = DateTime.Parse(rdr["DataLancamento"].ToString()),
 
                             //Atribui a propriedade DataLancamento o valor recebido no rdr
-                            Valor = Convert.ToInt32(rdr["Valor"]),
+                            Valor = float.Parse(rdr["Valor"].ToString()),
 
                             Estudio = new EstudioDomain()
                             {

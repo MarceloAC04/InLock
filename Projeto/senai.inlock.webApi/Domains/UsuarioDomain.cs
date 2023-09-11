@@ -12,5 +12,7 @@ namespace senai.inlock.webApi.Domains
 
         [StringLength(20, MinimumLength = 4, ErrorMessage = "A senha dever ter de 4 a 20 caracteres")]
         public string? Senha { get; set; }
+
+        public TiposUsuarioDomain TipoUsuario { get; set; } 
     }
 }

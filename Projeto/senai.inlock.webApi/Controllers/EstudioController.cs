@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.inlock.webApi.Domains;
 using senai.inlock.webApi.Interfaces;
@@ -31,6 +32,7 @@ namespace senai.inlock.webApi.Controllers
         /// </summary>
         /// <returns>retorna a resposta para o usuario(front-end)</returns>
         [HttpGet]
+        [Authorize(Roles = "1,2")]
         public IActionResult Get()
         {
             try
@@ -54,6 +56,7 @@ namespace senai.inlock.webApi.Controllers
         /// <param name="novoEstudio">Objeto recebido na requisição</param>
         /// <returns>status code 201(created)</returns>
         [HttpPost]
+        [Authorize(Roles = "2")]
         public IActionResult Post(EstudioDomain novoEstudio)
         {
             try
@@ -79,6 +82,7 @@ namespace senai.inlock.webApi.Controllers
         /// <param name="id">id do objeto recebido</param>
         /// <returns>code 201(deleted)</returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "2")]
         public IActionResult Delete(int id)
         {
             try

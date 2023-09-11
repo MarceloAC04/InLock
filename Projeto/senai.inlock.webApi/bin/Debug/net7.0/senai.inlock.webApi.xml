@@ -80,6 +80,12 @@
             </summary>
             <param name="id">id do objeto a ser deletado</param>
         </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Faz o login de acesso do usuario 
+            </summary>
+            <param name="email">Usuario cadastrado que sera logadp</param>
+        </member>
         <member name="F:senai.inlock.webApi.Repositories.EstudioRepository.StringConexao">
             <summary>
             String de conexao com o banco de dados que recebe os seguintes parametros
@@ -91,6 +97,16 @@
             </summary>
         </member>
         <member name="F:senai.inlock.webApi.Repositories.JogoRepository.StringConexao">
+            <summary>
+            String de conexao com o banco de dados que recebe os seguintes parametros
+            Data Source : Nome do servidor
+            Initial Catalog : Nome do Banco de dados
+            Autenticacao:
+                -Windows : Intergrated Security = true
+                -SQLServer : User Id = sa Pwd = Senha
+            </summary>
+        </member>
+        <member name="F:senai.inlock.webApi.Repositories.UsuarioRepository.StringConexao">
             <summary>
             String de conexao com o banco de dados que recebe os seguintes parametros
             Data Source : Nome do servidor
